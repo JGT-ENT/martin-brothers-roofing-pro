@@ -1,0 +1,178 @@
+export type Review = {
+  name: string;
+  date: string;
+  badge: string;
+  services: string[];
+  text: string;
+};
+
+export const REVIEWS: Review[] = [
+  {
+    name: "Melanie Cowan",
+    date: "1 day ago",
+    badge: "Reasonable price",
+    services: ["Roof repair"],
+    text: "Jaime was outstanding and helped me step by step through the whole process of replacing my hail-damaged roof and gutters. Since I had never filed a homeowners insurance claim before, I really did not know how roofing claims, inspections, and approval worked. He came out to my home in Flower Mound, checked the storm damage, explained everything in simple terms, and got the roof replacement moving the right way. On installation day, the roofing crew arrived on time with all the materials and started work right away. When I got back, the new roof looked excellent, the gutters were done well, and the property was left very clean with no nails or construction debris around the house.",
+  },
+  {
+    name: "Alison Eaton",
+    date: "1 week ago",
+    badge: "Great price",
+    services: ["Roof repair"],
+    text: "This was my first time needing a roof replacement, and I was really impressed with the whole roofing process. I had four roof inspections and estimates done, and out of all of them, only Nathan took the time to go into the attic and check the underside of the roof decking. That extra step uncovered issues the other roofers missed. The roofing crew was friendly, skilled, and professional from start to finish. After three days of work, everything looked neat and finished, like they had never even been there except for the brand-new roof.",
+  },
+  {
+    name: "Hazel Walters",
+    date: "2 weeks ago",
+    badge: "Reasonable price",
+    services: ["Roof inspection", "Attic venting"],
+    text: "After having new seamless gutters and roof drainage installed on our home, we want to share our sincere thanks to the crew who handled the work on a very warm day in Texas. Gage, Jaime, and Nathan did an excellent job. They were skilled, professional, friendly, and polite from start to finish. They cleaned the fascia and eaves during the installation, checked the yard carefully for any loose screws or nails, and blew off the deck before putting the outdoor furniture back in place.",
+  },
+  {
+    name: "Brandy Farrell",
+    date: "2 weeks ago",
+    badge: "Great price",
+    services: ["Attic venting"],
+    text: "Martin Brothers Roofers LLC is a top of the line roofing company. I called on a Friday after dealing with a roof leak for weeks while another roofer kept saying I needed a full roof replacement. The very next day, Marc and Gage arrived, checked the shingles and flashing, and explained that I did not need a whole new roof, just the right repair. They were early both times, which was really refreshing. The price was fair and matched the quote with no surprises.",
+  },
+  {
+    name: "Kenneth K",
+    date: "3 weeks ago",
+    badge: "Reasonable price",
+    services: ["Roof installation", "Gutter cleaning"],
+    text: "After searching online for gutter cleaning, I found Martin Brothers Roofers LLC as a top recommendation. They truly lived up to their reputation. The next day, Cole arrived right on time and did a fantastic job cleaning our clogged gutters—now everything flows like new. While here, he and the team also sealed up our windows facing the weather and fixed some missing siding just below the roofline.",
+  },
+  {
+    name: "Jane Ochoa",
+    date: "2 months ago",
+    badge: "Reasonable price",
+    services: ["Roof installation"],
+    text: "We had a wonderful experience working with this roofing company. Duane was fantastic to communicate with and made sure everything he promised was delivered. The roofing crew worked quickly and efficiently, showing they really knew what they were doing.",
+  },
+  {
+    name: "Latasha Hanna",
+    date: "2 months ago",
+    badge: "Great price",
+    services: ["Roof repair"],
+    text: "I first met Duane from a local roofing company when we had a big hail storm. Duane was walking around the area, and we started talking. When he came down from the roof, he told me I didn't actually need a new one—just a dent in one of the box vents. Here was someone being honest instead of just trying to make a sale. Later on, when my old t-lock shingles started to wear out, I reached out to Duane again. Highly recommend.",
+  },
+  {
+    name: "Randy R",
+    date: "2 months ago",
+    badge: "Reasonable price",
+    services: ["Roof inspection"],
+    text: "About ten years ago, I had my roof replaced by Martin Brothers Roofers LLC in Flower Mound. Recently my satisfaction grew even more after another experience. One Saturday afternoon after a heavy rainstorm, I noticed water leaking. Jaime got back to me within half an hour and offered to come over right away. He arrived quickly, got up on the roof, found the problem, and took care of the repair right then and there.",
+  },
+  {
+    name: "G McCoy",
+    date: "3 months ago",
+    badge: "Reasonable price",
+    services: ["Roof repair"],
+    text: "Robert from the roofing team spent a lot of time with us, patiently explaining all of our roofing options. On the day of the job, the crew showed up bright and early and finished up by the afternoon. Everyone on the team was friendly, respectful, and worked very professionally. The materials they used for our new roof were high quality. The crew did a thorough clean-up after the installation, leaving our property tidy.",
+  },
+  {
+    name: "Greyson Winters",
+    date: "3 months ago",
+    badge: "Great price",
+    services: ["Roof inspection", "Roof repair", "Gutter cleaning"],
+    text: "We had an incredible experience with this roofing company. Our house went from being the eyesore of the block to one of the best-looking homes in the neighborhood. The team gave us a brand new roof, replaced about 18 boards, installed top-tier shingles, brought the roof up to code, added new attic insulation, replaced our gutters, put in a dozen energy-efficient windows, new doors. The price felt very fair for all the work done.",
+  },
+  {
+    name: "Michaela Manning",
+    date: "3 months ago",
+    badge: "Reasonable price",
+    services: ["Roof inspection", "Attic venting"],
+    text: "After some strong winds over the weekend in Flower Mound, I noticed my roof had some damage. I called a few big roofing companies, but they all said they wouldn't be able to come out for at least a week. Then I called Martin Brothers Roofers LLC, and they told me someone would be out first thing the next morning. By 9:30am my roof was repaired and I felt so much better.",
+  },
+  {
+    name: "L Nelson",
+    date: "3 months ago",
+    badge: "Great price",
+    services: ["Attic venting"],
+    text: "We had an unexpected roof leak. When we reached out to this roofing team, they picked up the phone right away and gave us an honest update. Gage came out, gave us a clear and fair estimate, and the repairs were finished even sooner than we thought. The pricing was reasonable, and the whole process was stress-free.",
+  },
+  {
+    name: "Courtney Blackwell",
+    date: "4 months ago",
+    badge: "Great price",
+    services: ["Attic venting", "Roof repair"],
+    text: "Cole with the roofing company was fantastic! Nathan is always friendly and easy to talk to. The crew worked hard and did a really great job on our roof. They knew we have dogs, so they were extra careful cleaning up. We had a small problem with one of the gutters, but instead of just fixing it, they actually replaced it.",
+  },
+  {
+    name: "Joseph Barton",
+    date: "4 months ago",
+    badge: "Reasonable price",
+    services: ["Roof repair"],
+    text: "My experience with Martin Brothers Roofers LLC was excellent from the start. Jaime spent plenty of time checking every inch of my roof. After the job was scheduled, the crew showed up right on time, with Cole managing the team. The new roof looks fantastic, and they cleaned up everything so well you couldn't tell any work had even been done.",
+  },
+  {
+    name: "Dalton H",
+    date: "5 months ago",
+    badge: "Reasonable price",
+    services: ["Attic venting", "Roof repair"],
+    text: "Five stars! After a strong wind storm damaged my roof, I needed a full replacement. Once I contacted Martin Brothers Roofers LLC, everything changed for the better. I worked with Cole, who was professional and friendly throughout the process. They did a thorough roof inspection and gave me a quote that was much more affordable than the previous company.",
+  },
+  {
+    name: "Joy B",
+    date: "5 months ago",
+    badge: "Great price",
+    services: ["Attic venting", "Gutter cleaning"],
+    text: "Jaime actually showed up early for the quote, hopped up on the roof, and had an estimate ready for me in about 15 minutes. The price was fair, especially for Flower Mound. The team got right to work and, in less than 30 minutes, had the gutters removed, reinstalled with the correct slope, and completely cleaned out.",
+  },
+  {
+    name: "King Wilcox",
+    date: "5 months ago",
+    badge: "Reasonable price",
+    services: ["Roof inspection", "Roof repair"],
+    text: "The crew was extremely professional and used top-notch roofing materials. Duane treated me like family and was there from start to finish. We had our roof, gutters, and three skylights replaced, and we are thrilled with the results!",
+  },
+  {
+    name: "Cheryl7 S",
+    date: "5 months ago",
+    badge: "Great price",
+    services: ["Roof inspection"],
+    text: "The roofing team provided top-quality service, excellent expertise, and impressive workmanship. Gage was fantastic to work with—patient, knowledgeable, and took the time to consider every detail. The results exceeded our expectations.",
+  },
+  {
+    name: "Jennifer Pruitt",
+    date: "5 months ago",
+    badge: "Great price",
+    services: ["Roof installation"],
+    text: "I had Martin Brothers Roofers LLC put a new metal roof on my mobile home. Josiah came out to check everything and took careful measurements, then gave me a fast, clear quote. The crew was professional, showed up on time, and finished the job faster than I expected. The new roof looks amazing.",
+  },
+  {
+    name: "Heather Acosta",
+    date: "6 months ago",
+    badge: "Reasonable price",
+    services: ["Roof inspection"],
+    text: "I am extremely happy with my recent roof replacement. The crew finished the job fast and did excellent work! I could call Robert whenever I had questions, and he always took the time to answer and explain everything. The team showed true professionalism and honesty from start to finish.",
+  },
+  {
+    name: "B Cannon",
+    date: "6 months ago",
+    badge: "Great price",
+    services: ["Attic venting"],
+    text: "We had our home in Flower Mound repaired and got a brand new roof after a big storm, and we couldn't be happier with the results. The roofing crew was always on time and kept their promises throughout the project. Special thanks to Marc for making the whole process easy!",
+  },
+  {
+    name: "Zoey F",
+    date: "6 months ago",
+    badge: "Reasonable price",
+    services: ["Roof installation"],
+    text: "We had our old shingles removed and a brand new roof installed by this roofing company. They worked directly with our insurance company. Robert from the team explained each step clearly. The roofing crew was professional and finished the job in just one day.",
+  },
+  {
+    name: "Cathy Foster",
+    date: "6 months ago",
+    badge: "Reasonable price",
+    services: ["Roof installation"],
+    text: "We had an outstanding experience working with this roofing company in Flower Mound. They truly deserve more than 5 stars. Nathan and his team were extremely helpful and professional throughout the entire process. Jaime was especially great to work with—very friendly, knowledgeable, and reliable.",
+  },
+  {
+    name: "Ryder Hayden",
+    date: "6 months ago",
+    badge: "Great price",
+    services: ["Roof inspection", "Attic venting"],
+    text: "Getting a full roof replacement isn't something you need often, but I definitely needed it this time. The roofing team responded quickly to inspect my roof and clearly explained all my options. Robert and his crew came out, even though it was a really hot Texas day, and finished the entire roof in just one day.",
+  },
+];
