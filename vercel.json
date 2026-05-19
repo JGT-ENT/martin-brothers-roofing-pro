@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "bun install",
   "buildCommand": "vite build",
   "outputDirectory": "dist/client",
   "framework": null,
@@ -17,7 +18,8 @@
   ],
   "functions": {
     "api/[...all].ts": {
-      "maxDuration": 15
+      "maxDuration": 15,
+      "memory": 1024
     }
   }
 }
