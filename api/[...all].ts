@@ -1,11 +1,6 @@
-// Vercel Node serverless function: SSR entry point.
-// All non-static requests are rewritten here (see vercel.json) so TanStack
-// Start can handle routing, server functions, and HTML streaming.
 import type { IncomingMessage, ServerResponse } from "node:http";
 
-type ServerEntry = {
-  fetch: (request: Request) => Promise<Response> | Response;
-};
+type ServerEntry = { fetch: (request: Request) => Promise<Response> | Response };
 
 let serverEntryPromise: Promise<ServerEntry> | undefined;
 
@@ -36,7 +31,7 @@ function toWebRequest(req: IncomingMessage): Request {
     method,
     headers,
     body: hasBody ? (req as unknown as BodyInit) : undefined,
-    // @ts-expect-error — Node fetch needs duplex for streamed bodies
+    // @ts-expect-error duplex required for streamed bodies
     duplex: hasBody ? "half" : undefined,
   });
 }
@@ -44,12 +39,7 @@ function toWebRequest(req: IncomingMessage): Request {
 async function sendWebResponse(res: ServerResponse, webRes: Response) {
   res.statusCode = webRes.status;
   webRes.headers.forEach((value, key) => res.setHeader(key, value));
-
-  if (!webRes.body) {
-    res.end();
-    return;
-  }
-
+  if (!webRes.body) return res.end();
   const reader = webRes.body.getReader();
   while (true) {
     const { value, done } = await reader.read();
@@ -62,8 +52,7 @@ async function sendWebResponse(res: ServerResponse, webRes: Response) {
 export default async function handler(req: IncomingMessage, res: ServerResponse) {
   try {
     const entry = await getServerEntry();
-    const webReq = toWebRequest(req);
-    const webRes = await entry.fetch(webReq);
+    const webRes = await entry.fetch(toWebRequest(req));
     await sendWebResponse(res, webRes);
   } catch (error) {
     console.error("SSR error:", error);
@@ -78,6 +67,4 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   }
 }
 
-export const config = {
-  runtime: "nodejs",
-};
+export const config = { runtime: "nodejs20.x" };
